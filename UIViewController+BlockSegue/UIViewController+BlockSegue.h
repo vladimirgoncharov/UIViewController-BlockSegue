@@ -27,11 +27,11 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^UIViewControllerSegueBlock) (id sender, id destinationVC, UIStoryboardSegue *segue);
+typedef void (^UIViewControllerSegueBlock) (id _Nullable sender, id _Nonnull destinationVC, UIStoryboardSegue * _Nonnull segue);
 
 @interface UIViewController (BlockSegue)
 
--(void)configureSegue:(NSString *)identifier withBlock:(UIViewControllerSegueBlock)block;
--(void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender withBlock:(UIViewControllerSegueBlock)block;
+-(void)configureSegue:(NSString * _Nonnull)identifier withBlock:(UIViewControllerSegueBlock _Nullable)block;
+-(void)performSegueWithIdentifier:(NSString * _Nonnull)identifier sender:(id _Nullable)sender withBlock:(UIViewControllerSegueBlock _Nullable)block;
 
 @end
